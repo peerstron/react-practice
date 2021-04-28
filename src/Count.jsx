@@ -1,10 +1,13 @@
-import React, {useState} from "react";
-import { button } from "tailwindcss";
+import React, {useState, useEffect} from "react";
+// import { button } from "tailwindcss";
 
 
 const Count = () =>{
-    const [count, setCount] = useState(0);
+    useEffect(() =>{
+        console.log("Count Component Mounted");
+    }, []);
 
+    const [count, setCount] = useState(0);
     return(
         <>
             <p>Count is:   {count}</p>
