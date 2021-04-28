@@ -3,11 +3,12 @@ import React, {useState, useEffect} from "react";
 
 
 const Count = () =>{
-    useEffect(() =>{
-        console.log("Count Component Mounted");
-    }, []);
-
     const [count, setCount] = useState(0);
+    useEffect(() =>{
+        console.log("Count changed");
+    }, [count]);
+
+    
     return(
         <>
             <p>Count is:   {count}</p>

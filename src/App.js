@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import Counter from './Counter'
+import Todos from "./Todos";
 function App() {
   const [showCounter, hideCounter] = useState(false);
   return (
@@ -12,7 +13,7 @@ function App() {
         <button onClick={()=>hideCounter(!showCounter)}>{!showCounter? "Show Counter" : "Hide Counter"}</button>
         <br/>
         <Counter showCounter={showCounter}/>
-  
+        <Todos />
       </header>
     </div>
   );
