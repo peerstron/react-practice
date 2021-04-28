@@ -1,22 +1,18 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+// import Count from "./Count";
 
 function App() {
+  const [showCounter, hideCounter] = useState(false);
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p className={"text-red-900"}>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Hello World</h1>
+        <br/>
+        {/* <Count /> */}
+        <button onClick={()=>hideCounter(!showCounter)}>{showCounter? "Show Counter" : "Hide Counter"}</button>
+        <br/>
+        {/* {showCounter && <Count />} */}
       </header>
     </div>
   );
