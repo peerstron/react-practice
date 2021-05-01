@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import Counter from './Counter'
 import Todos from "./Todos";
+import Table from "./Table";
 function App() {
   const [showCounter, hideCounter] = useState(false);
   return (
@@ -12,8 +13,10 @@ function App() {
         {/* <Counter /> */}
         <button onClick={()=>hideCounter(!showCounter)}>{!showCounter? "Show Counter" : "Hide Counter"}</button>
         <br/>
-        <Counter showCounter={showCounter}/>
-        <Todos />
+        {/* <Counter showCounter={showCounter}/>
+        <Todos /> */}
+
+        <Table />
       </header>
     </div>
   );
