@@ -3,6 +3,7 @@ import './App.css';
 import Counter from './Counter'
 import Todos from "./Todos";
 import Table from "./Table";
+import Card1 from "./Card";
 function App() {
   const [showCounter, hideCounter] = useState(false);
   return (
@@ -18,6 +19,7 @@ function App() {
 
         <Table />
       </header>
+      <Card1 />
     </div>
   );
 }
